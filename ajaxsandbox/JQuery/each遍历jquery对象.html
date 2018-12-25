@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>each()遍历jquery对象</title>
+	<script type="text/javascript" src="jquery.js"></script>
+</head>
+<body>
+	<h1>111111111111111</h1>
+	<h1>2222222222222222</h1>
+	<h1>2222222222222222</h1>
+	<h1>2222222222222222</h1>
+	<h1>2222222222222222</h1>
+	<h1>2222222222222222</h1>
+	<h1>2222222222222222</h1>
+	<h1>2222222222222222</h1>
+	<script type="text/javascript">
+		$("h1").each(function(i){
+			$(this).attr({"num":i+1});
+		});
+		$("h1").click(function(){
+			$(this).html($(this).attr('num'));
+		});
+	</script>
+</body>
+</html>

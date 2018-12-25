@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>电影排行</title>
+	<link rel="stylesheet" type="text/css" href="css/ranking.css" />
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+  <style type="text/css">
+      #button{
+      display: block;
+      margin-left: 550px;
+      margin-top: 30px;
+      }
+      #box{
+        list-style-type: none;
+      }
+      #box li{
+        width: 23%;
+        height: 380px;
+        float: left;
+        border: 1px solid black;
+        margin: 10px 10px;
+        word-break:break-all
+      }
+      .more{
+      height: 200px;
+      width: 100%;
+      
+    }
+    .explain{
+      height: 150px;
+      width: 100%;
+      
+    }
+    .price{
+      width: 100%;
+      height: 150px;
+      border-bottom: 1px dashed rgb(153,153,153);
+      border-top: 1px dashed rgb(153,153,153);
+    }
+    .pic{
+      float: left;
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+  /*  body*/
+    .topic{
+      width: 185px;
+      height: 150px;
+      float: right;
+      margin-top: 20px;
+    }
+    .topic span{
+      color: rgb(153,153,153);
+    }
+    .text {
+      margin-top: 20px;
+      font-size: 11px;
+    }
+    .explain span{
+      color: rgb(153,153,153);
+    }
+    .explain span.time{
+      color: red;
+    }
+    
+    .price span{
+      color: rgb(153,153,153);
+    }
+    .price span.time{
+      color: red;
+    }
+    .sum{
+      margin-top: 90px;
+    }
+    .price .sum span.red{
+      color: red;
+      font-size: 30px;
+    }
+    .topic .pingfen{
+      display: inline-block;
+      margin-top: 50px;
+      margin-left: 50px;
+    }
+    .topic .ping{
+      color: red;
+      font-size: 30px;
+      text-shadow: 1px 4px 5px red;
+    }
+  </style>
+</head>
+<body>
+
+		<!-- 页首 -->
+		<div id="nav">
+          <img src="image/电影首页.jpg"  alt="图标"  width="200px" id="tuBiao"/>
+          <ul>
+              <li>
+                  <a href="index.html"><p>首页</p></a>
+              </li>
+              <li>
+                <a href=""><p>电影</p></a>
+              </li>
+              <li>
+                <a href=""><p>影院</p></a>
+              </li>
+              <li>
+                <a href="ranking.html"><p>榜单</p></a>
+              </li>
+              <li>
+                <a href=""><p>热点</p></a>
+              </li>
+              <li>
+                <a href="person.html"><p>个人中心</p></a>
+              </li>
+           </ul>
+       </div>
+
+		<!-- 内容 -->
+      <button id="button" onclick="AddMovies()">点击获取影片</button>
+	    <ul id="box">
+	    	
+	    </ul>
+
+
+		<!-- 页尾 -->
+	   <div style="clear:both;"></div>
+       <div id="footer">
+          <p>违法和不良信息举报电话: 4006018900 举报邮箱: jubao.maoyan@maoyan.com</p>
+          <p>友情链接 : <span>美团网</span>  <span>美团下载</span></p>
+          <p>2016 猫眼电影 maoyan.com 京ICP证160733号 京ICP备16022489号-1 京公网安备 11010502030881号 网络文化经营许可证 电子公告服务规则<p>
+          <p>北京猫眼文化传媒有限公司</p>
+       </div>
+
+       <script type="text/javascript">
+         function AddMovies() {
+            var btn=document.getElementById("button");
+            btn.style.display="none";
+           var xhr;
+           if (window.XMLHttpRequest) {
+              xhr=new XMLHttpRequest();
+           }
+           else{
+              xhr=new ActiveXObject("Microsoft",XMLHTTP);
+           }
+           xhr.onreadystatechange=function(){
+              if (xhr.readyState==4&&xhr.status==200) {
+                var movies=JSON.parse(xhr.responseText);
+                alert(typeof(movie));
+                // console.log(movies.data.length);
+                var len=movies.data.length;
+                var output='';
+                for(var i=0;i<len;i++){
+                  output+='<li>'+'<div class="more">'+
+              '<div class="pic">'+
+                 '<img src="'+movies.data[i].img+'" width="120px">'+
+              '</div>'+
+              '<div class="topic">'+
+                  '<h3>'+movies.data[i].nm+'</h3>'+
+                  '<div class="text">'+
+                    '<span>CAT：</span>'+movies.data[i].cat+
+                    '<br>'+
+                     '<span>演员：</span>'+movies.data[i].star+
+                     '<br>'+
+            '<span class="pingfen">评分：</span><i class="ping">'+movies.data[i].sc+'</i>'+
+                 '</div>'+
+               '</div>'+
+          '</div>'+
+          '<div class="explain">'+
+             '<br>'+
+
+             '<span>描述：</span>'+movies.data[i].scm+
+             '<br>'+
+             '<span>版本：</span>'+movies.data[i].ver+
+             '<br>'+
+             '<span>上映时间：</span><span class="time">'+movies.data[i].rt+'</span>'+
+             '<br>'+
+              '<span>票价：</span>¥ '+movies.data[i].dur+'/张'+
+          '</div>'+'</li>';
+                document.getElementById("box").innerHTML=output;
+                }
+
+              }
+           }
+           
+            xhr.open("GET","movies.json",true);
+            xhr.send();
+            
+         }
+       </script>
+</body>
+</html>

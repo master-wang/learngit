@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>one实现点赞功能</title>
+	<meta charset="utf-8">
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<button>点赞<span>100</span></button>
+	<script type="text/javascript">
+		$('button').one('click',function(){
+			val=parseInt($('span').html())+1;
+			$('span').html(val);
+			$('button').css({'background':'#ccc','color':'#fff'});
+		});
+	</script>
+</body>
+</html>

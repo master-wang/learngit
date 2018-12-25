@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>验证表单</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="jquery.js"></script>
+	<style type="text/css">
+		.error{
+			color: #f00;
+			font-weight: bold;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<form action="reg.php" method="get">
+		<p>账号:</p>
+		<p><input type="text" name="username" class="ao">
+			<span class="error">用户名的长度至少6位！</span></p>
+		<p>密码:</p>
+		<p><input type="text" name="password" class="ao">
+			<span class="error">密码的长度至少8位！</span></p>
+		<p>确认密码：</p>
+		<p><input type="text" name="repassword" class="ao">
+			<span class="error">两次密码不一致！！！！</span></p>
+		<p>邮箱：</p>
+		<p><input type="text" name="email" class="ao">
+			<span class="error">邮箱格式不正确！！！！</span></p>
+		<p><input type="submit" value="ok"></p>
+	</form>
+<script type="text/javascript">
+	$(".ao").data({"s":0});
+	$('input[name=username]').blur(function(){
+		val=this.value;
+		if(val.length<6){
+			$(this).data({"s":0});
+			$(this).next().show();
+		}else{
+			$(this).data({"s":1});
+			$(this).next().hide();
+		}
+	});
+	$('input[name=password]').blur(function(){
+		val=this.value;
+		if(val.length<8){
+			$(this).data({"s":0});
+			$(this).next().show();
+		}else{
+			$(this).data({"s":1});
+			$(this).next().hide();
+		}
+	});
+	$('input[name=repassword]').blur(function(){
+		val=this.value;
+		val2=$('input[name=password]').val();
+		if(val!=val2){
+			$(this).data({"s":0});
+			$(this).next().show();
+		}else{
+			$(this).data({"s":1});
+			$(this).next().hide();
+		}
+	});
+	$('input[name=email]').blur(function(){
+		val=this.value;
+		if(val.match(/^\w+@\w+\.\w+$/i)){
+			$(this).data({"s":1});
+			$(this).next().hide();
+		}else{
+			$(this).data({"s":0});
+			$(this).next().show();
+		}
+	});
+
+	$('form').submit(function(){
+		$('.ao').blur();
+		tot=0;
+		$(".ao").each(function(){
+			tot+=$(this).data("s");
+		});
+		if(tot!=4){
+
+			return false;
+		}
+	});
+</script>
+</body>
+</html>

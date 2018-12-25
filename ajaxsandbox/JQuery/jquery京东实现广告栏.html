@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery实现京东的左侧广告栏</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="jquery.js"></script>
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding:0;
+	}
+		#main{
+			
+			width: 1200px;
+			height: 500px;
+			margin: 0 auto;
+		}
+		ul{
+			width: 100px;
+			height: 500px;
+			background-color: #b61d1c;
+		}
+		span{
+			color: white;
+		}
+		li{
+			list-style: none;
+			width: 100%;
+			line-height: 50px;
+			height: 50px;
+			text-align: center;
+		}
+		.right{
+			width: 1100px;
+			height: 500px;
+			position: absolute;
+			background-color: #ccc;
+			left:153px; 
+			top: 0;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<div class="left">
+			<ul>
+				<li>
+					<span>家用电器</span>
+					<div class="right">
+						<h1>家用电器</h1>
+						家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，家用电器，
+					</div>
+				</li>
+				<li>
+					<span>电脑办公</span>																		<div class="right">
+						<h1>电脑办公</h1>
+						电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，电脑办公，
+					</div>		
+				</li>
+				<li>
+					<span>手机数码</span>
+					<div class="right">
+						<h1>手机数码</h1>
+						手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，手机数码，
+					</div>
+				</li>
+				<li>
+					<span>家居家装</span>
+					<div class="right">
+						<h1>家居家装</h1>
+						家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，家居家装，
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$('.left li').mouseenter(function(){
+			$(this).css({'background-color':'#ccc'});
+			$('.left li').not(this).css({'background-color':'#b61d1c'});
+			$(this).find('.right').show();
+			$('.right').not($(this).find('.right')).hide();
+		});
+		$('.left li').mouseleave(function(){
+			$('.right').hide();
+			$(this).css({'background-color':'#b61d1c'});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery1</title>
+	<script src="jquery.js"></script>
+	<style type="text/css">
+		.div{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: relative;
+		}
+	</style>
+	<script type="text/javascript">
+		// $(document).ready(function(){
+		// 	$("button").click(function(){
+		// 		$("p").css("background-color","red");
+		// 	});
+		// });
+
+		$(document).ready(function(){
+			$("button").click(function(){
+				var div=$("div.div");
+				div.animate({left:'200px',height:'200px',width:'200px'},"slow");
+				div.animate({fontSize:'30px'},"slow");
+			});
+			$("div.div").mouseover(function(){
+				$("div.div").css("width","500px")
+			});
+		});
+	</script>
+</head>
+
+<body>
+
+<button type="button">Click me</button>
+<div class="div">hellow world!</div>
+</html>

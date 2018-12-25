@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>速表拖动功能</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="jquery.js"></script>
+	<style type="text/css">
+		div{
+			position: absolute;
+			width: 200px;
+			height: 200px;
+			background-color: #ccc;
+			border-radius: 50%;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		
+	</div>
+	<script type="text/javascript">
+		function drag(obj){
+			obj.bind('mousedown',star);
+
+			
+			function star(event){
+				delX=event.clientX-obj.offset().left;
+				delY=event.clientY-obj.offset().top;
+
+				$(document).bind('mousemove',move);
+				$(document).bind('mouseup',stop);
+				return false;
+			}
+			function move(event){
+				obj.css({
+					'left':(event.clientX-delX)+'px',
+					'top':(event.clientY-delY)+'px'
+				})
+				return false;
+			}
+			function stop(event){
+				$(document).unbind('mousemove',move);
+				$(document).unbind('mouseup',stop);
+			}
+		}
+		obj=$('div').eq(0);
+		drag(obj);
+	</script>
+</body>
+</html>

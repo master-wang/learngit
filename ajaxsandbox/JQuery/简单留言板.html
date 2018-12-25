@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>留言板</title>
+	<meta charset="utf-8">
+	<script src="jquery.js"></script>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: 微软尔雅；
+		}
+		h3{
+			margin-left: 15px;
+		}
+		#main{
+			margin-top: 20px;
+			font-weight: bold;
+		}
+		textarea{
+			width: 500px;
+			height:100px;
+			border: 5px solid #272822;
+			border-radius: 20px;
+			margin-left: 15px;
+			font-weight: bold;
+
+		}
+		button{
+			width: 100px;
+			height: 30px;
+			background-color: #272822;
+			color: #fff;
+			font-weight: bold;
+			border: 1px solid #ccc;
+			border-radius: 15px;
+			margin-left: 15px;
+			margin-top: 15px;
+		}
+		button:hover{
+			border: 2px solid #00f;
+		}
+		.show{
+			margin-top: 15px;
+			margin-left: 15px;
+			width: 90%;
+			height: 50px;
+			border: 3px solid #ccc;
+			border-radius: 12px;
+			line-height: 50px;
+		}
+		.close{
+			width: 40px;
+			height: 40px;
+			float: right;
+			font-weight: bold;
+			cursor: pointer;
+			margin-top: 5px;
+			text-align: center;
+			line-height: 40px;
+			
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<h3>我的留言板</h3 >
+		<br>
+		<textarea></textarea>
+		<br>
+		<button>ok</button>
+		<!-- <div class="show">
+			<div class="close">&times;</div>
+			111111111111111111111111
+		</div> -->
+	</div>
+	<script type="text/javascript">
+		$('textarea').focus(function(){
+			this.value='';
+		});
+		$('button').click(function(){
+			val=$('textarea').val();
+			str='';
+			str='<div class="show"><div class="close">&times;</div>'+val+'</div>';
+			$('#main').append(str);
+			
+			$('.close').click(function(){
+				$(this).parent().hide(1000);
+			});
+		});
+		
+	</script>
+</body>
+</html>

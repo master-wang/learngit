@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery-表单的内容转移</title>
+	<meta charset="utf-8">
+	<script src="jquery.js"></script>
+	<style type="text/css">
+		select{
+			width: 100px;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<h1>选择</h1>
+	<form action="javascript:">
+		<select id="s1">
+			<option>10</option>
+			<option>20</option>
+			<option>30</option>
+			<option>40</option>
+			<option>50</option>
+			<option>60</option>
+		</select>
+		<button id="button">请选择</button>
+		<select id="s2">
+			
+		</select>
+	</form>
+	<script type="text/javascript">
+		$("#button").click(function(){
+			$("#s1 option:selected").clone().appendTo("#s2");
+		});
+	</script>
+</body>
+</html>
