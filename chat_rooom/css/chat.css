@@ -1,0 +1,11 @@
+body{
+			background-color: #ccc;
+};
+.chat-box{
+	margin: 100px auto;
+	width: 800px;
+	height: 500px;
+	background-color: rgba(0,0,0,0.22);
+	color: #eee;
+	border-radius: 10px;
+}

@@ -1,0 +1,16 @@
+create table liuyan
+(
+id int primary key AUTO_INCREMENT,
+pname varchar(20),
+content text,
+created_at timestamp
+);
+
+create table pinglun
+(
+id int primary key AUTO_INCREMENT,
+liuyan_id int,
+pname varchar(20),
+content text,
+created_at timestamp
+);

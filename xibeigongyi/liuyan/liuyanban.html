@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>发布留言</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	    /*总的div*/
+		.bigdiv{
+			margin: 40px auto;
+			height: 90%;
+			width: 90%;
+			background-color: #8e2323;
+		}
+        /*设计表单*/
+        .wform{
+        	height: 500px;
+        	text-align: center;
+        	line-height: 50px;
+        }
+        .triangle{
+        	height:150px;
+        }
+        .triangle san{
+        	position: absolute;
+        	left:480px;
+        	top:20px;
+        	display: block;
+        	width: 0;
+        	height:0;
+        	border-width: 150px 150px 0;
+            border-style: solid;
+            border-color: #b5a642 /*#5f9f9f */transparent transparent;
+        }
+	</style>
+</head>
+<body>
+	<div class="bigdiv">
+		<div class="triangle">
+
+			<san></san>
+		</div>
+	  <form class="wform" action="love.php" method="post">
+		<p>&nbsp;</p>
+		<p>
+			<textarea name="content" id="" cols="70" rows="10" placeholder="请输入你的留言信息"></textarea>
+		</p>
+		<p>
+			<input name="pname" type="text" placeholder="请输入你的昵称">
+		<p>
+			<input type="submit" value="发布留言">
+		</p>
+	  </form>
+	
+
+	  <a href="./index.php">观看论坛</a>
+	  <a href="">wyy</a>
+   </div> 
+</body>
+</html>

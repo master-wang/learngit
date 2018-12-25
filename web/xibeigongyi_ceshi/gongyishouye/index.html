@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>西部文化</title>
+	<style type="text/css">
+	    * {
+	    	margin: 0;
+	    	padding: 0;
+	    }
+	    /*::-webkit-scrollbar {
+            width: 0px;
+        }*/
+        a{
+        	text-decoration: none;
+        	color: black;
+        }
+		#out_a{
+			position: relative;
+			background: url(./imgs/6.png);
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		#out_b{
+			background: radial-gradient(white, black);
+			opacity: 0.6;
+		}
+		#in_head{
+			position: fixed;
+			height: 60px;
+			width: 100%;
+			background-color: rgb(255,255,255);
+			padding-left: 150px;
+			box-shadow: 10px 10px 10px  black;
+			z-index: 2; 
+		}
+		.p_one{
+			font-size: 40px;
+			text-shadow:  1px 1px black;
+		}
+		#head_p{
+			height: 30px;
+			width: 600px;
+			position: absolute;
+			margin-left: 700px;
+			margin-top: -35px;
+		}
+		.p_o:hover{
+			font-style: italic;
+		}
+		#head_p p{
+			font-size: 20px;
+			float: left;
+			margin-left: 100px;
+			cursor: pointer;
+		}
+		#describe{
+			position: absolute;
+			width: 400px;
+			height: 200px;
+			margin-top: 450px;
+			margin-left: 80px;
+		}
+		#row{
+			width: 70px;
+			height: 5px;
+			background-color: yellow;
+			border-radius: 0 50%;
+			position: absolute;
+			margin-top: 70px;
+		}
+		#English_describe{
+			width: 400px;
+			height: 100px;
+			margin-top: 100px;
+		}
+		.English_describe{
+			font-size: 30px;
+			font-family: "Times New Roman",Georgia,Serif;
+		}
+		.font{
+			font-size: 20px;
+		}
+		#direction_a{
+			width: 30px;
+			height: 40px;
+			position: absolute;
+			margin-top: 720px;
+			margin-left: 50%;
+			font-size: 30px;
+			cursor: pointer;
+			background-color: white;
+			text-align: center;
+			z-index: 9999;
+		}
+		#direction_b{
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			margin-top: 710px;
+			margin-left: 50%;
+			font-size: 30px;
+			cursor: pointer;
+			background-color: white;
+			text-align: center;
+			border-radius: 10%;
+			z-index: 9999;
+		}
+		#out_c{
+			width: 100%;
+			position: absolute;
+			background-color: rgb(200,191,231);
+			z-index: -1;
+		}
+		#out_c p{
+			display: block;
+			position: absolute;
+			margin-top: 300px;
+		}
+		#in_left{
+			position: absolute;
+			margin-top: 100px;
+			margin-left: 280px;
+			background-color: white;
+			width:300px;
+			height: 450px;
+			border-radius: 4%;
+			box-shadow: black 0 0 30px;
+			background: url(./imgs/12.jpg);
+			background-repeat: no-repeat;
+			background-position: top;
+		}
+		#in_center{
+			position: absolute;
+			margin-top: 100px;
+			margin-left: 600px;
+			background-color: white;
+			width:300px;
+			height: 450px;
+			border-radius: 4%;
+			box-shadow: black 0 0 30px;
+			background: url(./imgs/13.jpg);
+			background-repeat: no-repeat;
+			background-position: top;
+		}
+		#in_right{
+			position: absolute;
+			margin-top: 100px;
+			margin-left: 920px;
+			background-color: white;
+			width:300px;
+			height: 450px;
+			border-radius: 4%;
+			box-shadow: black 0 0 30px;
+			background: url(./imgs/14.jpg);
+			background-repeat: no-repeat;
+			background-position: top;
+		}
+		#in_left:hover{
+			box-shadow: white 0 0 60px
+		}
+		#in_center:hover{
+			box-shadow: white 0 0 60px
+		}
+		#in_right:hover{
+			box-shadow: white 0 0 60px
+		}
+		#in_down{
+			position: absolute;
+			width: 230px;
+			height: 100px;
+			margin-left: 640px;
+			margin-top: 550px;
+		}
+		#in_down p{
+			display: block;
+			margin-top: 40px;
+			position: absolute;
+			font-size: 25px;
+		}
+		#left_img_a{
+			position: absolute;
+			margin-top: 560px;
+			margin-left: 10px;
+		}
+		#left_img_b{
+			position: absolute;
+			margin-top: 570px;
+			margin-left: 180px;
+		}
+		#left_img_c{
+			position: absolute;
+			margin-top: 580px;
+			margin-left: 370px;
+		}
+		#left_img_d{
+			position: absolute;
+			margin-top: 580px;
+			margin-left: 935px;
+		}
+		#left_img_e{
+			position: absolute;
+			margin-top: 565px;
+			margin-left: 1130px;
+		}
+		#left_img_f{
+			position: absolute;
+			margin-top: 560px;
+			margin-left: 1310px;
+		}
+		#left_img_a img{
+			width: 200px;
+			height: 100px;
+		}
+		#left_img_b img{
+			width: 200px;
+			height: 100px;
+		}
+		#left_img_c img{
+			width: 200px;
+			height: 100px;
+		}
+		#left_img_d img{
+			width: 200px;
+			height: 100px;
+		}
+		#left_img_e img{
+			width: 200px;
+			height: 100px;
+		}
+		#left_img_f img{
+			width: 200px;
+			height: 100px;
+		}
+		#in_down a{
+			display: inline-block;
+			box-shadow: 0 0 10px blue;
+		}
+	</style>
+</head>
+<body>
+	<div id="out_a"><div id="out_b">
+		<div id="in_head">
+			<font class="p_one"><strong>西部文化</strong></font>
+			<div id="head_p">
+				<p class="p_o"><a href="index.html">首页</a></p>
+				<a href="22.html"><p class="p_o">鉴赏</p></a> 
+				<a href="../liuyan/liuyan.html"> <p class="p_o">论坛</p></a>
+			</div>		
+		</div>
+		<div id="describe">
+			<div id="row"></div>
+			<div id="English_describe">
+				<p class="English_describe"><strong>China Western Culture</strong></p>
+				<p class="font"><strong>文明圣火，千古未绝者，唯我无双；</strong></p>
+			</div>
+		</div>
+		<div id="direction_a"><p onclick="moveToY()">v</p></div>
+		<div id="direction_b"><p onclick="moveToY()">∨</p></div>	
+	</div></div>
+	<div id="out_c">
+		<div id="in_left">
+			<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;西部有相逢红尘内，高揖黄金鞭的浪漫；有九天阊阖开宫殿，万国衣冠拜冕琉的磅礴；暮雨向三峡，春江绕双流的美丽。西部有杰出的风情文化，无穷，无尽.......</strong></p>
+		</div>
+		<div id="in_center">
+			<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;西部有苍茫的塞外文化，无垠的大漠，高耸的雪原，如血的夕阳和陡峭的隔壁。一点一滴，一字一句书写着气势，渲染着崎岖。不断进步，不断发展......</strong></p>
+		</div>
+		<div id="in_right">
+			<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;西部有神奇的地域文化，不仅仅是在单层面上陶铸的，而是多层融会和穿透的。文化格局是混融与分化、多元与整一辩证、多维化发展；信仰与美感交织，宗教艺术审美的特色；游牧特色与浪漫精神结合，重自然、轻观念，雄浑中透出悲壮的风貌。
+			</strong></p>
+		</div>
+		<div id="in_down">
+			<p><strong><a href="22.html">一起阅读西部文化吧</a></strong></p>
+		</div>
+		<div id="left_img_a">
+			<img src="./imgs/31.png">
+		</div>
+		<div id="left_img_b">
+			<img src="./imgs/31.png">
+		</div>
+		<div id="left_img_c">
+			<img src="./imgs/31.png">
+		</div>
+		<div id="left_img_d">
+			<img src="./imgs/31.png">
+		</div>
+		<div id="left_img_e">
+			<img src="./imgs/31.png">
+		</div>
+		<div id="left_img_f">
+			<img src="./imgs/31.png">
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	window.onload = function(){
+		var dirb = document.getElementById("direction_b");
+		var dira = document.getElementById("direction_a");
+		var outA = document.getElementById("out_a");
+		var outB = document.getElementById("out_b");
+		var outC = document.getElementById("out_c");
+		var des = document.getElementById("describe");
+		function GetHeight() {
+			var outHeight_a = document.getElementById('out_a');
+			outHeight_a.style.height = parseInt(document.documentElement.clientHeight) + 'px';
+			var outHeight_b = document.getElementById('out_b');
+			outHeight_b.style.height = parseInt(document.documentElement.clientHeight) + 'px';
+			var outHeight_c = document.getElementById('out_c');
+			outHeight_c.style.height = parseInt(document.documentElement.clientHeight) + 'px';
+		}
+		GetHeight();	
+		moveToY=function (ele){
+			var timer = null;
+			ele = outC;
+			dira.style.display = "none";
+			dirb.style.display = "none";
+			des.style.display = "none";
+			var speed = 0;
+			var tar = 0;    	
+	    	timer = setInterval(function(){	
+	    		speed = (tar - ele.offsetTop)/10;
+	    		speed = Math.ceil(speed);
+	    		if(speed == 0){
+	    			clearInterval(timer);
+	    			ele.style.top = 0 + 'px';
+	    			outA.style.height = 0 + 'px';
+	    			outB.style.height = 0 + 'px';
+	    		}
+	    		else{
+	    			ele.style.top = ele.offsetTop  + speed + 'px';
+	    			outA.style.height = outA.offsetHeight + speed + 'px';
+	    			outB.style.height = outB.offsetHeight + speed + 'px';
+	    		}
+	    	},10)
+		}
+
+		moveUpY=function (ele){	
+			var timer = null;		
+			ele = outC;
+			var speed = 0;
+			var tar = parseInt(document.documentElement.clientHeight);    	
+	    	timer = setInterval(function(){	
+	    		speed = (tar - ele.offsetTop)/10;
+	    		speed = Math.floor(speed);
+	    		if(speed == 0){
+	    			clearInterval(timer);
+	    			ele.style.top = tar + 'px';
+	    			outA.style.height = tar + 'px';
+	    			outB.style.height = tar + 'px';
+	    		}
+	    		else{
+	    			ele.style.top = ele.offsetTop  + speed + 'px';
+	    			outA.style.height = (outA.offsetHeight + speed) + 'px';
+	    			outB.style.height = (outB.offsetHeight + speed) + 'px';
+	    		}
+	    		dira.style.display = "block";
+				dirb.style.display = "block";
+				des.style.display = "block";
+	    	},10)
+		}
+		outA.onmousewheel = function(){
+			if(event.wheelDelta<0){
+ 				moveToY(outA);
+ 				return false;
+ 			}
+    		else
+    			return false;
+ 		}
+ 		outC.onmousewheel = function(){
+ 			if(event.wheelDelta>0){
+ 				moveUpY(outC);
+ 				return false;
+ 			}
+    		else
+    			return false;
+ 		}
+	}
+</script>
+</html>

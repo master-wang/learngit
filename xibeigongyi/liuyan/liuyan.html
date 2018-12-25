@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>发布留言</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	   .ydiv{       /*包含表单和图片*/
+	   	height:100%;
+	   	width:100%;
+	   	margin:0px;
+	   	text-align: center;
+	   	background-color: #8E2323;
+	   }
+	   /*.wdiv1{*/       /*图片*/
+	  /*  float:left;
+	   	height:200px;
+	   	width:200px;	   	
+	   }
+	   img{
+	   display: block;
+	   	height:250px;
+	   	width:250px;
+	   }*/
+	   
+	   .wdiv2{     /* 表单*/
+	   	
+	   	float:right;
+	   	background-color:#f3f9f1;/*#f0f0f4铅白*//*#d6ecf0*/;
+	   	height:70%;
+	   	width:70%;
+        line-height: 50px;
+	   }
+	   .ydiv2{   /* 链接*/
+
+	   	position: absolute;
+	   	top:600px;
+        left:50%;
+        background-color: grey;
+	   }
+	   .ydiv2 a{
+	   	display: block;
+	   }
+     .wform textarea,input{      /*文本框的设置*/
+     	background-color: rgb(0,0,0,0);
+     	border:0px;
+     }
+	</style>
+</head>
+<body>
+	<div class="ydiv1">
+	
+	<!-- 放表单元素 -->
+	  <div class="wdiv2">
+	  <form class="wform" action="send.php" method="post">
+		<p>&nbsp;</p>
+		<p>
+			<textarea name="content" id="" cols="70" rows="10" placeholder="请输入你的留言信息"></textarea>
+		</p>
+		<p>
+			<input name="pname" type="text" placeholder="请输入你的昵称">
+		<p>
+			<input type="submit" value="发布留言">
+		</p>
+	  </div>
+	  </form>
+	<!-- 链接 -->
+    </div>
+    <div class="ydiv2">
+	  <a href="./index.php">观看论坛</a>
+	  <a href="">wyy</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html leng="zh">
+<head>
+	<meta charset="utf-8">
+	<title>爱尚品格商城</title>
+	<link rel="stylesheet" href="./shouye/bootstrap.css">
+	<script src="./shouye/jquery.js"></script>
+	<style type="text/css">
+		*{margin: 0;padding: 0}
+		body{
+			background-image: url(./shouye/气泡花.jpg);
+			background-size: cover;
+			background-attachment: fixed;
+			background-size: 100%;
+		}
+		a{text-decoration: none;}
+		#body{
+			height: 1000px;
+			position: fixed;
+			right: 0;
+			width: 1px;
+			border-right: 6px solid rgb(124,110,110);
+		}
+		#ol-liebiao ul{
+			display: block;
+			right: 0;
+			position: fixed;
+			width: 130px;
+			height:500px;
+			bottom: 50px;
+			text-align: center;
+			vertical-align: center;
+
+		}
+		#ol-liebiao ul li{
+			display: block;
+			line-height: 45px;
+			border-radius: 4px;
+			margin-top: 1px;
+			width: 130px;
+			height: 45px;
+			background-color: rgb(8,11,56);
+			animation: colors 6s infinite;
+		}
+		#ol-liebiao ul .ul-juli{margin-top: 150px;}
+		#ol-liebiao ul li a:hover{
+			color: red;
+			
+		}
+		@keyframes  colors{
+			0%{
+				background-color: rgb(246,242,181);
+			}
+			25%{
+				background-color: rgb(0,151,206);
+			}
+			40%{
+				background-color: rgb(174,214,212);
+			}
+			60%{
+				background-color: rgb(163,172,206);
+			}
+			75%{
+				background-color: rgb(238,136,74);
+			}
+			85%{
+				background-color: rgb(176,217,129);
+			}
+			100%{
+				background-color: rgb(254,184,182);
+			}
+		}
+		
+
+
+		#cha span{
+			position: absolute;
+			height: 30px;
+			width: 30px;
+			opacity: 0.1;
+			right: 160px;
+			top: 0;
+			background-color: blue;
+		}
+        #cha:hover  #ding{
+        	display: none;
+
+        }
+		#menu{
+			width: 100%;
+			height: 30px;
+			background-color: rgb(227,228,229);
+		}
+		#menu .menu-map{
+			width: 50px;
+			height: 100%;
+			margin-left: 370px;
+			background-color: rgb(227,228,229);
+			background-size: 100%;
+			float: left;
+			text-align: center;
+			/*overflow: hidden;*/
+		}
+		#menu .menu-map span{
+			line-height: 100%;
+			text-align: center;
+			font-size: 12px;
+		}
+		#menu .menu-map:hover{
+			background-color: white;
+			background-size: 100%;
+		}
+		.menu-map:hover #ditu{
+			display: block;
+		}
+
+		#ditu{
+			position: absolute;
+			display: none;
+			width: 310px;
+			height: 210px;
+			top: 30px;
+			background-color: white;
+		}
+		#ditu a{
+			display: block;
+			width: 50px;
+			height: 20px;
+			color: rgb(153,153,153);
+			float: left;
+			margin-left: 5px;
+			margin-top: 7px;
+			text-align: center;
+			font-size: 10px;
+			padding-top: 3px;
+		}
+		#ditu a:hover{
+			background-color: rgb(227,228,229);
+			color: red;
+		}
+		#ditu a:first-child{
+			background-color: red;
+		}
+		#main-body{
+			width: 1188px;
+			height: 628px;
+			
+			margin: auto;
+			
+		}
+		#guopingri{
+			width: 165.5px;
+			height: 480px;
+			position: fixed;
+			top: 160px;
+			left: 0;
+			background-color: rgb(155,144,142);
+			background-size: 100%;
+			color: white;
+			opacity: 0.5;
+			
+			
+
+		}
+		#guopingri div{
+			height: 50px;
+			border-bottom: 1px solid white;
+			color: white;
+			
+		}
+		#guopingri div a{
+			color: white;
+		}
+		#guopingri div a:hover{
+			color: red;
+			
+		}
+		
+		.shouye-fenlei{
+			background-color: rgb(155,144,142);
+		}
+		.shouye-fenlei img{
+			vertical-align: center;
+
+		}
+		#guopingri div.fenlei1{
+			background-color: red;
+			height: 40px;
+			font-size: 30px;
+			text-align: center;
+			line-height: 30px;
+		}
+
+
+
+		#menu #menu-you{
+			margin-top: -30px;
+			float: left;
+			margin-left: 650px;
+			width: 800px;
+			height: 100%;
+			line-height: 30px;
+			font-size: 12px;
+			color: rgb(153,153,153);
+		}
+		#menu-you a{
+			color: rgb(165,165,165);
+		}
+		#menu-you a:hover{color: red;}
+		#menu #menu-you .mianfeizhuce{color: red;}
+		#menu #menu-you span{
+			display: block;
+			float: left;
+			text-align: center;
+			width: 72px;
+			height: 30px;
+			
+			
+			
+		}
+		#wodejingdong{
+			width: 77px;
+			height: 100%;
+			
+			float: left;
+			
+		}
+		#wodejingdong:hover{
+			background-color: white;
+		}
+		#wodejingdong:hover #wode{
+			display: block;
+		}
+		#wode{
+			height: 200px;
+			width: 250px;
+			background-color: white;
+			position: absolute;
+			top: 30px;
+			display: none;
+
+		}
+	    #menu #menu-you #wodejingdong #wode a{
+	    	display: block;
+	    	width: 40%;
+	    	float: left;
+	    	height: 20%;
+	    	padding-left: 10px;
+	    }
+
+
+
+
+
+		#qiyecaigou{
+			width: 77px;
+			height: 100%;
+			
+			float: left;
+
+		}
+		#qiyecaigou:hover{
+			background-color: white;
+		}
+		#qiyecaigou:hover #fuwu{
+			display: block;
+		}
+		#fuwu{
+			position: absolute;
+			width: 170px;
+			height: 270px;
+			background-color: white;
+			top: 30px;
+			right: 355px;
+			display: none;
+		}
+		#fuwu hr{
+			color: rgb(102,102,102);
+		}
+		#menu #menu-you #qiyecaigou #fuwu span{
+			width: 100%;
+			text-align: left;
+			padding-left: 10px;
+			font-size: 13px;
+			color: black;
+
+		}
+		#menu #menu-you #qiyecaigou #fuwu a{
+			display: block;
+			width: 40%;
+			float: left;
+			padding-left: 10px;
+		}
+
+
+
+
+
+		
+
+
+		#sosuokuang{
+			width: 100%;
+			height: 130px;
+		}
+		.sousuo-zuo{
+			float: left;
+		}
+		.sousuo-you{
+			float: left;
+		}
+		.sousuo-you input{
+			width: 400px;
+			height: 40px;
+
+			display: block;
+			margin-left: 50px;
+			margin-top: 50px;
+			color: rgb(147,148,148);
+			border: 1px solid blue;
+			border-radius: 20px;
+		}
+		.sousuo-you span{
+			display: block;
+			float: left;
+			padding-left: 50px;
+			color: black;
+		}
+		.sousuo-zhong img{
+			display: block;
+			float: right;
+			margin-top: 45px;
+		}
+		#shouye{
+			background-color: rgb(8,8,9);
+			width: 100%;
+			height: 40px;
+			color: white;
+		}
+		#shouye ul{
+			list-style: none;
+			font-size: 25px;
+		}
+		#shouye ul li{
+			display: block;
+			width: 12%;
+			height: 100%;
+			float: left;
+			text-align: center;
+			line-height: 40px;
+		}
+		#shouye ul li a{
+			color: white;
+		}
+		#shouye ul li a:hover{
+			color: blue;
+		}
+		#shouye ul li.shouye-1{
+			background-color: red;
+		}
+
+		#beijingtu{
+			width: 100%;
+			height: 450px;
+			position: relative;
+			background-color: red; 
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			animation: beijing 20s  infinite ;
+			overflow: hidden;
+			
+
+		}
+		#beijingtu img{
+			display: none;
+		}
+		#beijingtu a{
+			position: absolute;
+			width: 50px;
+			height: 30px;
+			text-align: center;
+			line-height: 30px;
+			font-size: 12px;
+			cursor: pointer;
+ 			
+  			top: 50%;
+  			width: auto;
+ 			margin-top: -22px;
+  			padding: 16px;
+ 			color: white;
+ 			font-weight: bold;
+  			font-size: 18px;
+  			transition: 0.6s ease;
+  			border-radius: 0 3px 3px 0;
+		}
+		#beijingtu a.next{
+			right:0px;
+		}
+		.pre:hover {
+ 			 background-color: rgba(0,0,0,0.8);
+		}
+		 .next:hover {
+ 			 background-color: rgba(0,0,0,0.8);
+		}
+		.dot{
+			display: inline-block;
+			position: absolute;
+			cursor:pointer;
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			background-color: white;
+			bottom: 10px;
+			margin: 0 2px;
+
+		}
+		.active, .dot:hover {
+  background-color: #717171;
+}
+		#beijingtu .dot1{
+			left: 540px;
+		}
+		#beijingtu .dot2{
+			left: 560px;
+		}
+		#beijingtu .dot3{
+			left: 580px;
+		}
+		#beijingtu .dot4{
+			left: 600px;
+		}
+
+
+
+</style>
+      <style type="text/css">
+      	#main-body2{
+
+      		width: 1188px;
+      		height: 1000px;
+      		
+      		margin: auto;
+      		perspective: 1200px;
+
+      	}
+      	#main-body2 div.tu1,div.tu2,div.tu3,div.tu4,div.tu5,div.tu6{
+      		width: 380px;
+      		height: 450px;
+      		margin-top: 20px;
+      		margin-left: 10px;
+            box-shadow: 5px 5px 10px rgb(210,210,210);
+      		border: 1px solid black;
+      		float: left;
+      	}
+      	#main-body2 div.tu1,div.tu2,div.tu3,div.tu4,div.tu5,div.tu6：hover{
+      		border: 2px solid red;
+      	}
+      	#foot{
+      		width: 100%;
+      		padding-top: 50px;
+      		height: 60px;
+      		background-color: rgb(165,165,165);
+      		text-align: center;
+      		color-rendering: red;
+      	}
+      	.picture{
+      		width: 100%;
+      		height: 80%;
+      		perspective: 1200px;
+      		
+      	}
+      	.picture img{
+      		width: 100%;
+      		height: 100%;
+      		border-radius: 300px;
+      		transition: 2s;  
+            opacity: 0.6;
+      		}
+      	.picture img:hover{
+      		
+      		transform: translateZ(100px);
+
+      	}
+
+      	.zi a{
+      		display: block;
+      		margin-top: 10px;
+      		border-bottom: 1px solid red;
+      		color: red
+      	}
+      	.mai a {
+      		display: block;
+      		float: left;
+      		font-size: 30px;
+      		color: red;
+      		margin-left: 10px;
+      		margin-top: 20px;
+      	}
+
+      	.mai div.count{
+      		display: block;
+      		width: 130px;height: 40px;
+      		float: right;
+      		margin-top: 20px;
+      		color: black;
+      		/*background-color: red;*/
+      		text-align: center;
+      		line-height: 40px;
+      		/*text-shadow: 9px 5px 2px black;*/
+      		cursor: hand;
+      	}
+      	.mai div.count button{
+      		width: 40px;
+      		height: 20px;
+      	}
+
+      	#count-all{
+      		width: 1188px;
+      		margin-top: 10px;
+      		margin: auto;
+      		line-height: 45px;
+      		border: 1px solid red;
+      		line-height: 40px;
+      		font-size: 25px;
+      		text-align: center;
+      		color: red;
+      	}
+      	#count-all button{
+      		display: block;
+      		width: 80px;height: 40px;
+      		float: right;
+      		margin-right: 10px;
+      		color: white;
+      		background-color: red;
+      		text-align: center;
+      		line-height: 40px;
+      		text-shadow: 9px 5px 2px black;
+      		cursor: pointer;
+      	}
+      	#liuyan{
+			  position: fixed;
+			  width: 60px;
+			  height: 50px;
+			  left: 1%;
+			  bottom: 10%;
+			  border-radius: 20px;
+			  box-shadow:0 0 60px rgb(32, 216, 170);
+		  }
+		  #liuyan img{
+			  border-radius: 20px;
+			  cursor: pointer;
+		  }
+      </style>
+      <script type="text/javascript">
+      	alert("欢迎来到我们的爱尚品格商城");
+      </script>
+</head>
+<body>
+	<div id="body"></div>
+    <div id="ol-liebiao">
+    	<ul>
+    		<li class="you1"><a href="" class="you1a">爱逛好货</a></li>
+    		<li class="you2"><a href="" class="you2a">好店直播</a></li>
+    		<li class="you3"><a href="" class="you3a">实惠热卖</a></li>
+    		<li class="you4"><a href="" class="you4a">猜你喜欢</a></li>
+    		<li class="ul-juli you5"><a href="" class="you5a">客服</a></li>
+    		<li class="you6"><a href="" class="you6a">反馈</a></li>
+    		<li class="you7"><a href="" class="you7a">我的购物车(0)</a></li>
+    		<li class="you8"><a href="#menu" class="you8a">回顶部</a></li>
+    		
+
+    	</ul>
+    </div>
+
+
+
+		
+	<div id="cha"><span></span></div>	
+
+
+
+
+
+
+
+
+
+
+	<div id="menu">
+		<div class="menu-map">
+			<span>公寓</span>
+			<div id="ditu">
+				<a href="">安悦公寓</a> <a href="">安美公寓</a> <a href="">长思公寓</a> <a href="">安美公寓</a>
+
+			</div>
+		</div>
+
+
+		<div id="menu-you">
+			<span><a id="putname" href="#" style="color:blue"></a></span>
+			<span id="tuichu"><a  href="denglu.html" style="color:blue">退出登陆</a></span>
+			<span ><a href="zhuce.html" class="mianfeizhuce" >免费注册 &nbsp;&nbsp; </a>|</span>
+			<span><a href="">我的订单&nbsp;&nbsp;  </a>|</span>
+			<div id="wodejingdong">
+                <span ><a href="">我的爱尚&nbsp;&nbsp; </a></span>
+				<div id="wode">
+					<a href="">待处理订单</a><a href="">消息</a>
+					<a href="">返修退换货</a><a href="">我的回答</a>
+					<a href="">降价商品</a><a href="">我的关注</a>
+					<hr/>
+					<a href="">我的爱尚</a><a href="">我的优惠卷</a>
+					<a href="">我的白条</a><a href="">我的理财</a>
+				</div>
+
+			</div>
+			<span><a href="">爱尚会员&nbsp;&nbsp;  </a>|</span>
+			<span><a href="">企业采购&nbsp;&nbsp;  </a>|</span>
+			<div id="qiyecaigou">
+				<span><a href="">客户服务&nbsp;&nbsp; </a></span>
+				<div id="fuwu">
+					<span>客户</span>
+					<a href="">帮助中心</a><a href="">售后服务</a>
+					<a href="">在线客服</a><a href="">意见建议</a>
+					<a href="">电话套餐</a><a href="">客服邮箱</a>
+					<a href="">金融咨询</a><a href="">售全球服务</a>
+					<hr/>
+					<span>商户</span>
+					<a href="">合作招商</a><a href="">学习中心</a>
+					<a href="">商家后台</a><a href="">京麦工作台</a>
+					<a href="">商家帮助</a><a href="">规则平台</a>
+					
+				</div>
+				
+			</div>
+			<span><a href="">网站导航&nbsp;&nbsp;  </a>|</span>
+			<div id="shoujijingdong">
+				
+
+			</div>
+
+		</div>
+	</div>
+
+
+
+	<div id="main-body">
+		<div id="sosuokuang">
+			<div class="sousuo-zuo">
+				<a href=""><img src="./shouye/allbuy.jpg" width="243px;"></a>
+			</div>
+			<div class="sousuo-you">
+				<input type="text" name="" placeholder="西邮购物购你想要的">
+				
+				<span><a href="">旧书特价</a></span><span><a href="">最近发布</a></span><span><a href="">西邮好货</a></span><span><a href="">二手电子产品</a></span>
+			</div>
+			<div class="sousuo-zhong">
+				<a href=""><img src="./shouye/退赔钱.png"></a>
+			</div>
+			
+		</div>
+
+
+		<div id="shouye">
+			<ul>
+				<li class="shouye-1"><a href="">首页</a></li>
+				<li><a href="">精选品牌</a></li>
+				<li><a href="">西邮美食</a></li>
+				<li><a href="">今日新单</a></li>
+				<li><a href="">领劵中心</a></li>>
+				<li><a href="">9.9包邮</a></li>
+				<li><a href="">二手市场</a></li>
+				<li><a href="">会员专区</a></li>
+
+			</ul>
+			
+		</div>
+
+
+		<div id="beijingtu">
+					<img src="./shouye/背景手表.jpg" style="width:100%" class="iii">
+					<img src="./shouye/背景车.jpg" style="width:100%" class="iii">
+					<img src="./shouye/背景衣服.jpg" style="width:100%" class="iii">
+					<img src="./shouye/背景手机.jpg" style="width:100%" class="iii">	
+
+					<a class="pre" onclick="plusSlides(-1)"> < </a>
+  					<a class="next" onclick="plusSlides(1)"> > </a>
+
+  					<div id="dotlist">
+  						<span class="dot dot1" onclick="currentSlide(1)"></span>
+  						<span class="dot dot2" onclick="currentSlide(2)"></span>
+  						<span class="dot dot3" onclick="currentSlide(3)"></span>
+  						<span class="dot dot4" onclick="currentSlide(4)"></span>
+  						
+  					</div>	
+
+        </div>
+</div>
+
+
+<div id="main-body2">
+	<div class="tu1">
+		<div class="picture"><a href=""><img src="./shouye/图1.png"></a></div>
+		<div class="zi"><a href="">  春装女装韩版小清新灯芯绒蝴蝶结亟待长袖寸衫上</a></div>
+		<div class="mai"><a href="">￥ 29.98</a><div class="count">
+				
+			    <button onclick="calc(this)">-</button>  
+                <span>0</span>  
+                <button onclick="calc(this)">+</button> </div></div>
+		
+	</div>
+	<div class="tu2">
+		<div class="picture"><a href=""><img src="./shouye/图2.png"></a></div>
+		<div class="zi"><a href="">  针织渐变围巾女冬季韩版学生百搭长款冬天简约文</a></div>
+		<div class="mai"><a href="">￥ 39.80</a><div class="count">
+			    <button onclick="calc(this)">-</button>  
+                <span>0</span>  
+                <button onclick="calc(this)">+</button> </div></div>
+	</div>
+	<div class="tu3">
+		<div class="picture"><a href=""><img src="./shouye/tu3.jpg"></a></div>
+		<div class="zi"><a href="">  二手高数书...</a></div>
+		<div class="mai"><a href="">￥ 5.00</a><div class="count">
+			    <button onclick="calc(this)">-</button>  
+                <span>0</span>  
+                <button onclick="calc(this)">+</button> </div></div>
+	</div>
+	<div class="tu3">
+		<div class="picture"><a href=""><img src="./shouye/图4.png"></a></div>
+		<div class="zi"><a href="">  惠普(HP)暗影精灵3代Plus GTX1060 17.3寸...</a></div>
+		<div class="mai"><a href="">￥ 7500.00</a><div class="count">
+			    <button onclick="calc(this)">-</button>  
+                <span>0</span>  
+                <button onclick="calc(this)">+</button> </div></div>
+	</div>
+	<div class="tu4">
+		<div class="picture"><a href=""><img src="./shouye/图5.png"></a></div>
+		<div class="zi"><a href="">  稀奇（XQ）稀奇艺术红茶瓷杯双面男天使浮雕...</a></div>
+		<div class="mai"><a href="">￥ 298.00</a><div class="count">
+			    <button onclick="calc(this)">-</button>  
+                <span>0</span>  
+                <button onclick="calc(this)">+</button> </div></div>
+	</div>
+	<div class="tu4">
+		<div class="picture"><a href=""><img src="./shouye/图6.png"></a></div>
+		<div class="zi"><a href="">  javaScript高级程序设计（第三版）...</a></div>
+		<div class="mai"><a href="">￥ 83.20</a>
+			<div class="count">
+			    <button onclick="calc(this)">-</button>  
+                <span>0</span>  
+                <button onclick="calc(this)">+</button>
+            </div></div>
+	</div>
+
+
+	<div id="count-all"><span>总计：￥ </span><span>0</span><button onclick="buyall()" class="mind">去购买</button></div>
+
+</div>
+
+
+<div id="liuyan">
+<img id="liuyan_img" src="./shouye/liuyan.png" alt="">
+</div>
+
+
+<div id="foot">
+
+	</a>
+		<br>
+		&copy; 2018西邮爱尚品格商城 版权所有
+	    
+    
+		
+</div>
+<script type="text/javascript">
+function getQueryString(name) {
+			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+			var r = window.location.search.substr(1).match(reg);
+			if (r != null) return decodeURI(r[2]);
+			return null;
+		}
+	function buyall(){
+		var pname=getQueryString("pname");
+		console.log(pname);
+		if(pname==null||pname=='null'){
+			alert("你还未登陆，请登陆之后在购买！");
+			window.location.href="./denglu.html";
+		}else{
+			var spans=document.getElementsByTagName("span");
+			var count=parseFloat(spans[spans.length-1].innerHTML);
+			confirm("总价："+count+"元，确定购买吗？");
+		}
+			
+	}
+</script>
+
+<script>  
+//购物
+    function calc(btn){  
+         
+        var td=btn.parentNode;  
+         
+        var span=td.getElementsByTagName("span")[0];  
+         
+        var n=parseInt(span.innerHTML);  
+        
+        if(btn.innerHTML==="+"){  
+            n++;  
+        }else if(n!=0){n--;} 
+         
+        span.innerHTML=n;  
+   
+        var div=document.getElementsByClassName("count");
+        for(var i=0,len=div.length,sum=0;i<len;i++){
+        	var x=div[i].getElementsByTagName("span")[0];
+        	var y=parseInt(x.innerHTML);
+        	sum+=y;
+        }
+        var li=document.getElementsByClassName("you7")[0];
+        li.innerHTML="我的购物车("+sum+")";
+        
+
+        var all=document.getElementById("count-all");
+        var tow=all.getElementsByTagName("span")[1];
+        var star=parseFloat(tow.innerHTML);
+
+        var mai=document.getElementsByClassName("mai");
+        for(var i=0,len=mai.length,jia=0;i<len;i++){
+        	var a=mai[i].getElementsByTagName("a")[0];
+        	var m=parseFloat(a.innerHTML.slice(2));
+        	var x=div[i].getElementsByTagName("span")[0];
+        	var y=parseInt(x.innerHTML);
+        	jia+=m*y;
+
+        }
+        tow.innerHTML=jia.toFixed(2);
+
+
+
+    }  
+
+</script>
+<script type="text/javascript">
+//幻灯片
+	var slideIndex = 1;
+showSlides(slideIndex);
+ 
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+ 
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+ 
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("iii");
+  var dots = document.getElementById("dotlist").getElementsByTagName("span");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+
+
+
+</script>
+
+<script>
+
+
+$(document).on('click', '#liuyan_img', function() {
+	var pname=getQueryString("pname");
+	console.log(pname);
+	window.location.href="./liuyan/liuyan.html?pname="+pname;
+})
+
+
+</script>
+<script>
+		
+			window.onload=function(){
+				var pname= getQueryString("pname");
+				console.log(pname);
+				console.log(pname!='null');
+				console.log(pname!=null);
+				var amain=document.getElementsByTagName("a");
+				console.log(amain);
+				if(pname!=null||pname!='null'){
+					for(var i=0;i<amain.length;i++){
+							if(i!=13||i!=79){
+								
+							}else{
+								var lianjie=amain[i].getAttribute("href");
+								amain[i].setAttribute("href",lianjie+"?pname="+pname);
+							}
+							
+			
+					}
+				}
+
+
+
+							//登录成功显示名字
+				var pname=getQueryString("pname");
+				console.log(pname);
+				if(pname!=null&&pname!='null'){
+					var name=document.getElementById("putname");
+					console.log(name.innerHTML);
+					name.innerHTML="你好！"+pname;	
+					name.setAttribute("href","#");
+					var tuichubtn=document.getElementById("tuichu");
+					tuichubtn.style.display="block";
+				}else{
+					var name=document.getElementById("putname");
+					console.log(name.innerHTML);
+					name.innerHTML="你好！请登陆";	
+					name.setAttribute("href","denglu.html");
+					var tuichubtn=document.getElementById("tuichu");
+					tuichubtn.style.display="none";
+				}
+				
+		}
+		</script>
+
+
+	
+
+</body>
+</html>

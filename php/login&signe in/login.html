@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <form action="">
+        <p>用户名：<input type="text">  </p>
+        <p>密码：<input type="password"> </p>
+        <p><input type="button" value="登录" onclick="zhigongjifengetMsg()"></p>
+    </form>
+    <script>
+    function zhigongjifengetMsg(){
+                   
+                    $.ajax({
+                        url:"./login.php",
+                        type:"post",
+                        success:function(data){
+                           console.log(data);
+                        },
+                        error:function(data){
+                            console.log(data);
+                        }
+                    });
+                }
+                
+            </script>
+    </script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>发布留言</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	a{
+		text-decoration: none;
+	}
+		body{
+			background-image: url("./imgs/liuyanbk.jpg");
+			background-size: cover;
+			background-attachment: fixed;
+			background-repeat:no-repeat;
+			
+		}
+		h1{
+			margin-top:30px;
+			margin-bottom: 50px;
+			margin-left: 30%;
+			color: white;
+		}
+	   .ydiv1{       /*包含表单和图片*/
+	   	width:100%;
+	   	margin:0px;
+		
+	   }
+	  
+	   
+	   .wdiv2{     /* 表单*/
+	   	
+	   	height:70%;
+		width:60%;
+		margin-left: 20%;
+		line-height: 50px;
+		background-color: #ccc;
+		border-radius: 10px;
+			text-align: left;
+		padding: 20px;
+		opacity: 0.8;
+		-webkit-box-shadow: 0 0 50px rgb(54, 137, 214);
+		-moz-box-shadow: 0 0 50px rgb(54, 137, 214);
+		box-shadow: 0 0 50px rgb(54, 137, 214);
+	   }
+	   .ydiv2{   /* 链接*/
+
+	   	position: absolute;
+	   	top:650px;
+        left:45%;
+        
+	   }
+	   
+     .wform textarea,input{      /*文本框的设置*/
+		display: inline-block;
+			padding: 6px 12px;
+			margin-bottom: 0;
+			font-size: 14px;
+			font-weight: bold;
+			line-height: 1.42857143;
+			text-align: center;
+			vertical-align: middle;
+			cursor: pointer;
+			user-select: none;
+			background-image: none;
+			border:1px solid transparent;
+			border-radius: 4px;
+			color: white;
+			background-color: #5bc0de;
+			border-color: #46b8da;
+	 }
+
+	.ydiv2 a{
+			display: inline-block;
+			padding: 6px 12px;
+			margin-right: 10px;
+			margin-bottom: 0;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 1.42857143;
+			text-align: center;
+			white-space: nowrap;
+			vertical-align: middle;
+			-ms-touch-action: manipulation;
+			touch-action: manipulation;
+			cursor: pointer;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			background-image: none;
+			border: 1px solid transparent;
+			border-radius: 4px;
+			color: #fff;
+			background-color: #5cb85c;
+			border-color: #4cae4c;
+			box-shadow: 0 0 10px #5cb85c;
+		}
+	 .nick-input input{
+			display: inline-block;
+			padding: 6px 12px;
+			margin-bottom: 0;
+			font-size: 14px;
+			font-weight: bold;
+			line-height: 1.42857143;
+			text-align: center;
+			vertical-align: middle;
+			cursor: pointer;
+			user-select: none;
+			background-image: none;
+			border:1px solid transparent;
+			border-radius: 4px;
+			color: #fff;
+			background-color: #5bc0de;
+			border-color: #46b8da;
+		}
+		.heart3d{
+			width: 100px;
+			height: 160px;
+			top: 50px;
+			left: 100px;
+			position: absolute;
+			
+			perspective: 2000px;
+			animation: xuan 2s infinite;
+		}
+		.heart{
+			position: absolute;
+			width: 100px;
+			height: 160px;
+			border:2px solid red;
+			margin: 100px auto;
+			border-left: 0;
+			border-bottom: 0;
+			border-radius: 50% 50% 0/40% 50% 0;
+			
+		}
+		@keyframes xuan {
+			0%{transform: rotateX(0deg);transform: rotateZ(0deg)}
+
+			50%{transform: rotateX(30deg);transform: rotateZ(30deg)}
+
+			100%{transform: rotateX(90deg);transform: rotateZ(0deg)}
+		}
+	</style>
+</head>
+<body>
+		<h1>评论区：写下你的到处一游吧!</h1>
+		<div class="heart3d"></div>
+		<script type="text/javascript">
+			window.onload=function(){
+	
+	
+			var heart3d=document.getElementsByClassName('heart3d')[0];
+			var timer=null;
+			for(var i=0;i<36;i++){
+				var oDiv=document.createElement('div');
+				oDiv.className='heart';
+				oDiv.style.transform='rotateY('+i*10+'deg) rotateZ(45deg) translateX(30px)';
+				heart3d.appendChild(oDiv);
+			}
+			function ro(){
+				heart3d.style.transform='rotateY(10deg)';
+			}
+			timer=setInterval(function(){
+				ro();
+			},10);
+		}
+		</script>
+
+
+	<div class="ydiv1">
+	
+	<!-- 放表单元素 -->
+	  <div class="wdiv2">
+	  <form class="wform" action="send.php" method="post">
+		<p>&nbsp;</p>
+		<p>
+			<label for=""> 输入留言信息：</label>
+			<textarea name="content" id="" cols="70" rows="10" placeholder="请输入你的留言信息"></textarea>
+		</p>
+		<p class="nick-input">
+				<span>请输入你的昵称：</span>
+			<input  name="pname" type="text" placeholder="请输入你的昵称">
+		<p>
+			<input type="submit" value="发布留言">
+		</p>
+	  
+	  </form>
+		</div>
+	</div>
+	
+	<!-- 链接 -->
+    <div class="ydiv2">
+	  <a href="./index.php">观看论坛</a>
+	  <a href="../gongyishouye/index.html">返回首页</a>
+    </div>
+</body>
+</html>

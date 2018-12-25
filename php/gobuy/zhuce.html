@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>爱尚品格会员注册网</title>
+	<link rel="stylesheet" href="./shouye/bootstrap.css">
+	<script src="./shouye/jquery.js"></script>
+	<meta charset="utf-8">
+	<style type="text/css">
+	    *{
+			margin: 0;
+			padding: 0;
+		}
+		a{
+			text-decoration: none;
+		}
+      body{
+        background-image: url("./shouye/气泡彩虹.jpg");
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+	    input{
+	    	color: #c0c0c0;
+	    }
+	    .you-shang span{
+	    	color: red;
+	    }
+	    #head{
+	    	
+	    	width: 100%;
+	    	height: 50px;
+	    	background-color: #F19900
+	    }
+	    
+		#nav{
+			float: left;
+            background-color: #F19900;
+            height: 50px;
+            width: 500px;
+            margin-left: 20px;
+
+		}
+		ul{
+			list-style: none;
+		}
+		ul li{
+			float: left;
+
+			line-height: 50px;
+			text-align: center;
+			position: relative;
+		}
+		#nav a{
+			text-decoration: none;
+			color: #FFFFFF;
+			display: block;
+			height: 50px;
+			width: 100px;
+		}
+		#nav a:hover {
+			background-color: #F17503;
+			color: #FFFFFF;
+		}
+
+
+		ul li ul li{
+			float: none;
+			background-color: #F19900;
+		}
+		ul li ul{
+			position: absolute;
+			top: 50px;
+            left: 0px;
+			width: 90px;
+			display: none;
+		}
+        ul li ul li a:link,ul li ul li a:visited{
+        	background-color: #F17503;
+
+        }
+        ul li ul li a:hover{
+        	background-color: #F17503;
+        }
+        ul li:hover ul{
+        	display: block;
+        }
+        .head-right{
+        	float: right;
+        	margin-right: 100px;
+        	line-height: 50px;
+        }
+        #main{
+        	width: 900px;
+        	height: 700px;
+        	margin: auto;
+        	margin-top: 20px;
+        	border-top: 1px solid #F19900;
+
+        }
+        #main .shang{
+        	height: 50px;
+        	line-height: 50px;
+        	width: 100%;
+        	
+        }
+        #main .shang p{
+        	margin-left: 190px;
+        }
+        #main .zuo{
+        	width: 180px;
+        	height: 250px;
+        	float: left;
+        }
+        #main .zuo input{
+        	width: 100px;
+        	height: 25px;
+        	margin-left: 38px;
+        	margin-top: 15px;
+        }
+        #main .zuo .zuo-pic{
+        	width: 180px;
+        	border: 1px solid #c0c0c0;
+        }
+        #main .zuo .zuo-pic img{
+        	width: 100%;
+        }
+        #main .you{
+        	width: 710px;
+        	height: 650px;
+        	float: right;
+        	border: 1px solid #c0c0c0;
+        }
+        .you-shang{
+        	width: 680px;
+        	height: 510px;
+        	margin-left: 15px;
+        }
+        .you-shang select{
+        	width: 153px;
+        }
+        .you-xia{
+        	width: 680px;
+        	height: 100px;
+        	border-top: 1px dashed #c0c0c0;
+        	margin-left: 15px;
+        	padding-top: 20px;
+        }
+
+        form div{
+			margin-top:30px;
+		}
+		label.field{
+			display: block;
+			float: left;
+			margin-right: 15px;
+			width: 180px;
+			text-align: right;
+		}
+		label.required{
+			font-size: 15px;
+		}
+		.hao div{
+			margin-top: 10px;
+		}
+		label.guoji input{
+			width: 90px;
+		}
+		label.quhao input{
+			width: 70px;
+		}
+    .zhuce input{
+          margin-left: 200px;
+    }
+    #foot{
+
+          width: 100%;
+          padding-top: 50px;
+          height: 100px;
+          background-color: rgb(165,165,165);
+          text-align: center;
+          color-rendering: red;
+        }
+	</style>
+</head>
+<body>
+	<div id="head">
+      
+
+
+	  
+
+	  <div class="head-right">
+	  	<span><a href="">欢迎来到爱尚商城会员注册网 ！</a> <a href="denglu.html">请登录</a>  </span>
+	  	
+	  </div>
+    </div>
+
+    <div id="main">
+
+    	<div class="shang">
+    		<p>基本信息：</p>
+    		
+    	</div>
+    	
+    	<div class="you">
+    		<div class="you-shang">
+    			<form action="/required" method="past" enctype="multipart/form-data">
+                   <div>
+                   	  <label class="required field"><span>* </span> 姓名 ：</label>
+                   	  <input type="text" name="姓名" width="200px">
+                   </div>
+                   <div>
+                   	  <label class="required field"><span>* </span> 性别 ：</label>
+                   	  <label><input type="radio" name="sex" value="男"> 男</label>
+                   	  <label><input type="radio" name="sex" value="女"> 女</label>
+                   </div>
+                   <div>
+                   	  <label class="required field"><span>* </span> 出生日期 ：</label>
+                   	  <input type="taxt" name="出生日期">
+                   </div>
+                   
+                   <div>
+                   	  <label class="required field"><span>* </span> 手机号 ：</label>
+                   	  
+                   	  <label><input type="text" name="手机号"></label>
+                   </div>
+                   
+                   <div>
+                      <label class="required field"><span>* </span> 用户名 ：</label>
+                      <input type="text" name="用户名" width="200px" onblur=" yanzheng()"> <span style="color:red;display: none" id="no">用户名已被注册，请输入新用户名</span><span style="color:green;display: none" id="ok">ok</span>	
+                   </div>
+                   <div>
+                      <label class="required field"><span>* </span> 密码 ：</label>
+                      <input type="text" name="密码" width="200px">
+                   </div>
+                   <div>
+                   	  <label class="required field"><span>* </span> 所属学院 ：</label>
+                   	  <input type="text" name="yuanxi" width="200px">
+                   </div>
+
+					<div class="zhuce">
+						<input id="sub" type="button" onclick="signed()" name="" class="btn btn-primary" value="马上注册">
+					</div> </form>
+    		</div>
+    		
+    			
+    			
+    		   
+    		
+    	</div>
+    	
+    </div>
+    <div id="foot">
+		<script>
+		function signed(){
+			
+			var data={
+				"name":$('input[name="姓名"]').val(),
+				"sex":$('input[name="sex"]:checked').val(),
+				"chushengriqi":$('input[name="出生日期"]').val(),
+				"phone":$('input[name="手机号"]').val(),
+				"usename":$('input[name="用户名"]').val(),
+				"password":$('input[name="密码"]').val(),
+				"yuanxi":$('input[name="yuanxi"]').val()
+			}
+			console.log(data);
+			data=JSON.stringify(data);
+			console.log(data);
+			$.ajax({
+				url:"./singned.php",
+				data:data,
+				type:'post',
+				datatype:'json',
+				success:function(data){
+					if(data==1){
+						alert("注册成功！将返回登录界面");
+						window.location.href="./denglu.html";
+					}
+				},
+				error:function(data){
+					alert("注册失败！");
+					$('input[name="姓名"]').val('');
+					$('input[name="sex"]:checked').val('');
+					$('input[name="出生日期"]').val('');
+					$('input[name="手机号"]').val('');
+					$('input[name="用户名"]').val('');
+					$('input[name="密码"]').val('');
+					$('input[name="yuanxi"]').val('');
+				}
+			})
+			
+		}
+
+		function yanzheng(){
+			var data={
+				
+				"usename":$('input[name="用户名"]').val(),
+				
+			}
+			console.log(data);
+			data=JSON.stringify(data);
+			$.ajax({
+				url:"./yanzheng.php",
+				type:'post',
+				data:data,
+				datatype:'json',
+				success:function(data){
+					console.log(data);
+					console.log(typeof(data));
+					if(data=='1'){
+						document.getElementById("ok").style.display="none";
+						document.getElementById("no").style.display="block";
+						document.getElementById("sub").setAttribute("onclick","aaa()");
+					}
+					else{
+						document.getElementById("ok").style.display="block";
+						document.getElementById("no").style.display="none";
+						document.getElementById("sub").setAttribute("onclick","signed()");
+					}
+				},
+				error:function(data){
+					console.log(data);
+				}
+			});
+		}
+
+		function aaa(){
+			alert("账户已被注册！！");
+		}
+		</script>
+
+ 
+    <br>
+    &copy; 2018西邮爱尚品格商城 版权所有
+      
+   
+    
+</div>
+</body>
+<img src="">
+</html>

@@ -1,0 +1,24 @@
+create table liuyan
+(
+id int primary key AUTO_INCREMENT,
+pname varchar(20),
+content text,
+created_at timestamp
+);
+
+create table pinglun
+(
+id int primary key AUTO_INCREMENT,
+liuyan_id int,
+pname varchar(20),
+content text,
+created_at timestamp
+);
+登录注册的表
+create table login
+(
+    id int primary key AUTO_INCREMENT,
+    usename varchar(20),
+    password varchar(20),
+    created_at timestamp
+);
